@@ -14,17 +14,8 @@ export const users: User[] = [
         name: 'Juan Pablo',
         password: '12345',
         money: 500,
-        photo: 'https://github.com/JuanPabloGomezHaroCabrera.png',
+        photo: 'https://github.com/JuanPabloGHC.png',
         nOrders: 9,
         rank: 0
-    },
-    {
-        id: 2,
-        name: 'Emilio Rivera',
-        password: '12345',
-        money: 1000,
-        photo: 'https://github.com/EmilioRivera.png',
-        nOrders: 17,
-        rank: 1
-    },
+    }
 ]
