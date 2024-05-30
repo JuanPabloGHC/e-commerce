@@ -1,0 +1,41 @@
+<div class="topbar">
+
+    <a class="section"
+    routerLink="/">
+        <em class="material-icons">storefront</em>
+        <h1>GH-COMMERCE</h1>
+        <hr>
+    </a>
+    
+    <a class="section"
+    routerLink="/products" >
+        <em class="material-icons">inventory</em>
+        <h2>Products</h2>
+    </a>
+
+    <a class="section"
+    routerLink="/profile" >
+        @if(user !== undefined) {
+            <img alt="profile" src="{{ user.photo }}" style="width: 30px; border-style: solid; border-radius: 50%;"/>
+        } @else {
+            <em class="material-icons">person</em>
+        }
+        <h2>Profile</h2>
+    </a>
+    
+    <div class="section" style="margin-left: auto;">
+        @if(user) {
+            <button (click)="logout()">Logout</button>
+        } @else {
+            <button [routerLink]="['/login']">Login</button>
+            <button [routerLink]="['/signup']">Signup</button>
+        }
+        
+        
+        <a class="carrito"
+        routerLink="/cart">
+        <em class="material-icons">shopping_cart</em>
+        </a>
+    </div>
+
+</div>

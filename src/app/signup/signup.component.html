@@ -1,0 +1,19 @@
+<section>
+
+    <h3 class="title">SIGNUP</h3>
+
+    <form class="box" [formGroup]="profileForm" (submit)="signup()">
+        <label for="name">Name: </label>
+        <input class="inputs" id="name" type="text" required (change)="change()" [formControl]="name">
+        <label for="password">Password: </label>
+        <input class="inputs" id="password" type="password" required (change)="change()" [formControl]="password">
+        <label for="passwordCopy">Reenter Password: </label>
+        <input class="inputs" id="passwordCopy" type="password" [formControl]="passwordCopy">
+        <label for="photo">Photo: </label>
+        <input class="inputs" id="photo" type="text" [formControl]="photo">
+        <button [disabled]="invalid" style="border-radius: 12px; border: 3px solid #02634e; padding: 10px; background-color: transparent; color: #02634e;">Signup</button>
+    </form>
+
+    <p style="color: red;" [textContent]="errorMessage"></p>
+
+</section>

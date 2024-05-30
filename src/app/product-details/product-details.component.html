@@ -1,0 +1,40 @@
+<section>
+
+  <h2 class="title">Product Details</h2>
+  
+  @if (product) {
+  
+    <div style="display: flex; justify-content: center;">
+  
+      <div class="container">
+      
+        <h3>{{ product.name }}</h3>
+        <img alt="producto" src="https://github.com/JuanPabloGomezHaroCabrera.png" style="width: 100px; border-radius: 50%;"/>
+        <h4>{{ product.price | currency }}</h4>
+        <p>{{ product.description }}</p>
+      
+        @if (product.inStock) {
+          <button type="button" style="border-radius: 12px; border: 3px solid #02634e; padding: 10px; background-color: transparent; color: #02634e; display:flex; margin-left:auto;"
+          (click)="addToCart(product)">
+            Add
+          </button>
+    
+        }@else {
+    
+          <p style="color:red; display:flex; justify-content:end; margin-left:auto; margin-right:3px;">
+            NOT IN STOCK
+          </p>
+    
+        }
+      
+      </div>
+  
+    </div>
+  
+  }
+  
+  <a routerLink="/products">
+    <button style="border-radius: 12px; border: 3px solid red; padding: 10px; background-color: transparent; color: red;">Back</button>
+  </a>
+
+</section>

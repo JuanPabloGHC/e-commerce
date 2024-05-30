@@ -1,0 +1,61 @@
+.topbar {
+    display: flex; 
+    flex-direction: row;
+    background-color: #1c8575;
+    border-radius: 8px;
+}
+
+hr {
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 60px;
+    width: 1px;
+    border-width: 0;
+    color: white;
+    background-color: white;
+}
+
+.section {
+    text-decoration: none; 
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: auto; 
+    margin-bottom: auto;
+    margin-left: 20px; 
+    display: flex; 
+    gap: 10px;
+}
+.section:hover {
+    color: black;
+}
+
+.carrito {
+    text-decoration: none; 
+    color: white; 
+    margin-top: auto; 
+    margin-bottom: auto; 
+    margin-left: auto; 
+    margin-right: 10px;
+}
+.carrito:hover {
+    color: black;
+}
+
+button {
+    background-color: transparent; 
+    border: 1px solid; 
+    border-radius: 10px; 
+    color: white; 
+    margin-top: auto; 
+    margin-bottom: auto; 
+    margin-left: auto;
+    padding: 3px;
+}
+
+button:hover {
+    color: black;
+    border-color: black;
+    cursor: pointer;
+}

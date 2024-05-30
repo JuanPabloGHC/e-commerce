@@ -1,0 +1,35 @@
+<h2 class="title">Products</h2>
+
+<div class="card-container">
+
+  @for (product of products; track product.id) {
+
+    <div class="card">
+
+      <div class="card-title">
+        <a style="text-decoration: none; color: #02634e;"
+        [routerLink]="['/products/', product.id]"
+          [title]="product.name + ' details'"
+          >
+          {{ product.name }}
+        </a>
+      </div>
+
+      <p> 
+        {{ product.description ? product.description : 'no description' }} 
+      </p>
+    
+      <div class="buttons-container">
+
+        <button (click)="share()" [disabled]="!product.inStock"
+        style="border-radius: 12px; border: 3px solid lightseagreen; background-color: transparent; color: lightseagreen;"> 
+          Share
+        </button> 
+      </div>
+
+    </div>
+
+  }
+ 
+  
+</div>

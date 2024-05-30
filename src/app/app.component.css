@@ -1,0 +1,15 @@
+section {
+    height: 100%;
+}
+
+.content {
+    height: 100%;
+}
+
+.footer {
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+}

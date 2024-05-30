@@ -1,0 +1,30 @@
+section {
+    text-align: center;
+    margin: 0 auto;
+    width: 60%;
+    padding: 64px;
+    min-height: 100vh;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    border-radius: 10px;
+    border: solid 3px #1b6a60;
+    padding: 10px;
+}
+
+.title {
+    text-align: center;
+    font-size: 40px;
+    color: #53eab7;
+  }
+  
+.inputs {
+    width: 50%;
+    margin: 10px;
+    border-color: #1b6a60;
+}

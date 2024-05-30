@@ -1,0 +1,47 @@
+<div class="section">
+
+    @if(user) {
+        <div style="display: flex; justify-content: center;">
+        
+                <div class="container">
+                
+                    <section>
+                
+                        <h2>RANK</h2>
+                        <hr style="width: 50%;">
+                
+                        <em class="material-icons" [style.color]="rank.color" style="font-size: 10em;">shield</em>
+                
+                        <h3 [style.color]="rank.color">{{ rank.name }}</h3>
+                        
+                    </section>
+                    
+                    <section>
+                        <img alt="producto" src="{{ user.photo }}" style="width: 200px; border-radius: 50%; border-style: solid;"/>
+                    
+                        <h3>{{ user.name }}</h3>
+                    
+                    </section>
+                
+                    <section>
+                
+                        <div style="margin: auto;">
+                            <h2>MONEY</h2>
+                            <hr style="width: 50%;">
+                            <h3>{{ user.money | currency }}</h3>
+                        </div>
+                
+                        <div>
+                            <h2>ORDERS</h2>
+                            <hr style="width: 50%;">
+                            <h3>{{ user.nOrders }}</h3>
+                        </div>
+                
+                    </section>       
+            </div>
+            
+        </div>
+    }
+
+</div>
+

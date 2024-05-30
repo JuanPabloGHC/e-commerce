@@ -1,0 +1,60 @@
+
+<div class="container">
+  <h3 class="title">CART</h3>
+
+  <div class="card">
+
+    @for (order of cart.orders; track $index) {
+
+      <div class="item">
+
+        <div>
+          <p>{{ order.product.name }}</p>
+          <p>{{ order.product.price | currency }}</p>
+        </div>
+
+        <div style="margin: auto; display: flex; gap: 3px; justify-content: center; text-align: center; align-items: center;">
+          <button style="border-radius: 50%;" (click)="removeFromCart(order.product)"><em class="material-icons" style="font-size: small;">remove</em></button>
+          <p>{{ order.cantidad }}</p>
+          <button style="border-radius: 50%;" (click)="addToCart(order.product)"><em class="material-icons" style="font-size: small;">add</em></button>
+        </div>
+
+        <div style="margin: auto;">
+          <p>{{ order.subTotal | currency }}</p>
+        </div>
+
+        <div
+        style="display:flex; flex-direction:row; gap: 3px; justify-content:center; text-align:center; margin-top:auto; margin-left:auto; margin-bottom:auto; margin-right:3px;"
+      >
+        <button
+          type="button"
+          style="border-radius: 12px; border: 3px solid red; background-color: transparent; color: red; height:35px;"
+          (click)="deleteOrder(order)"
+        >
+          <em class="material-icons" style="color:red">delete</em>
+        </button>
+      </div>
+
+      </div>
+
+    }
+
+    @if (cart.orders.length > 0) {
+
+      <h3>Total: {{cart.total | currency}}</h3>
+      <button
+        type="button"
+        style="border-radius: 12px; border: 3px solid orange; padding: 10px; background-color: transparent; color: orange;"
+        (click)="BuyCart()"
+      >
+        BUY
+      </button>
+
+    }@else {
+      <p>EMPTY CART</p>
+    }
+
+  </div>
+</div>
+
+<p style="color: red; text-align: center;" [textContent]="errorMessage"></p>
