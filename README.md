@@ -89,7 +89,7 @@ Users {
     rank: number
 }
 
-Order {
+Orders {
     id: number
     product: Product
     cantidad: number
